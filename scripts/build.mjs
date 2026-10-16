@@ -113,7 +113,7 @@ function tablaHorario(L, T) {
     <caption class="sr">${T.horario_caption}</caption>
     <tbody>${filas.join("")}</tbody>
   </table>
-  <p class="nota">${esc(L.clinica.horario_nota)} ${pendiente("Horario por confirmar")}</p>`;
+  <p class="nota">${esc(L.clinica.horario_nota)}</p>`;
 }
 
 // ---------- iconos (trazo, heredan color) -------------------------------
@@ -180,7 +180,7 @@ function galeria(ctx) {
   return `<section class="bloque galeria-bloque" aria-labelledby="galeria-t">
   <div class="envoltura">
     <h2 id="galeria-t">${ctx.T.instalaciones_t}</h2>
-    <p class="bloque-intro">${ctx.T.instalaciones_intro} ${pendiente("Confirmar con Carmen los nombres de cada sala")}</p>
+    <p class="bloque-intro">${ctx.T.instalaciones_intro}</p>
     ${principal ? figura(principal, 0, true) : ""}
     <div class="galeria"><div class="galeria-col">${col(0)}</div><div class="galeria-col">${col(1)}</div></div>
   </div>
@@ -203,7 +203,6 @@ function opiniones(ctx) {
       ${externo(o.url_ver, "boton-tinta", T.opiniones_ver)}
       ${o.PENDIENTE_ENLACE_RESENA ? externo(o.PENDIENTE_ENLACE_RESENA, "boton-claro", T.opiniones_dejar) : ""}
     </div>
-    ${o.PENDIENTE_ENLACE_RESENA ? "" : pendiente("Falta el enlace para dejar una reseña en Google: el botón «Déjanos tu opinión» aparecerá al añadirlo")}
   </div>
 </section>`;
 }
@@ -284,7 +283,7 @@ ${jsonLD(ctx)}
 <a class="saltar" href="#contenido">${T.saltar}</a>
 ${
   BORRADOR
-    ? `<div class="aviso-borrador" role="note" lang="es">Versión de trabajo. Los datos resaltados están pendientes de confirmar y los textos de servicios, de revisión clínica.${lang === "en" ? " La traducción al inglés también está pendiente de revisión." : ""}</div>`
+    ? `<div class="aviso-borrador" role="note" lang="es">Versión de trabajo, aún sin publicar. Los datos resaltados están pendientes de confirmar.</div>`
     : ""
 }
 <header class="cabecera">
@@ -358,8 +357,7 @@ function botonesContacto(ctx, extra = "") {
     <a class="boton boton-tinta" href="${telHref}">${ICONO.tel}<span>${esc(T.llamar_al(C.telefono))}</span></a>
     ${C.whatsapp ? `<a class="boton boton-claro" href="${waHref(L.clinica.whatsapp_mensaje)}" rel="noopener">${ICONO.wa}<span>${T.whatsapp}</span></a>` : ""}
     ${C.url_agenda ? `<a class="boton boton-claro" href="${esc(C.url_agenda)}" rel="noopener">${T.cita_online}</a>` : ""}
-  </div>
-  ${C.whatsapp ? pendiente("Confirmar que este número usa WhatsApp") : ""}`;
+  </div>`;
 }
 
 const enlaceServicio = (ctx, s) => ctx.ruta(RUTAS[ctx.lang].servicio(s.slug));
@@ -483,7 +481,6 @@ function paginaServicio(ctx, s) {
       <h2>${T.que_hacemos}</h2>
       ${lista(s.que_hacemos)}
       ${s.id === "podologia-deportiva" ? `<p class="nota-formacion">${esc(T.cursando_dep(C.profesional.nombre_corto))}</p>` : ""}
-      ${s.id === "estudio-biomecanico" ? pendiente("En las fotos se ven cinta de andar y plataforma: confirmar si la plataforma es de presiones y si se graba vídeo, para describirlo") : ""}
       <h2>${T.faq}</h2>
       <div class="faq">${s.faq.map((f) => `<details><summary>${esc(f.p)}</summary><p>${esc(f.r)}</p></details>`).join("")}</div>
     </article>
@@ -537,10 +534,8 @@ function sobreMi(ctx) {
     <div>
       <h1>${T.sobre_h1}</h1>
       <p class="entradilla">${esc(T.sobre_intro(p.nombre_corto))}</p>
-      <p>${pendiente("Completar con un párrafo de trayectoria escrito o aprobado por Carmen (años de ejercicio, qué le motiva de su trabajo)")}</p>
       <h2>${T.formacion}</h2>
       <ul class="formacion">${L.clinica.formacion.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>
-      ${pendiente("Añadir titulación de base y universidad")}
       <h2>${T.colegiacion}</h2>
       <p>${esc(T.colegiada(p.colegiada, L.clinica.colegio))}</p>
       ${botonesContacto(ctx)}
@@ -567,8 +562,6 @@ function contacto(ctx) {
       <h2>${T.direccion}</h2>
       <address><strong>${esc(C.nombre_comercial)}</strong><br>${esc(C.direccion.calle)}<br>${C.direccion.cp} ${esc(C.direccion.localidad)} (${esc(C.direccion.provincia)})</address>
       <div class="acciones"><a class="boton boton-claro" href="${C.direccion.mapa_url}" rel="noopener">${ICONO.mapa}<span>${T.abrir_mapa}</span></a></div>
-      <h2>${T.acceso}</h2>
-      <p>${pendiente("Indicar si hay escalones, ascensor y dónde aparcar")}</p>
     </div>
     <div>
       <h2>${T.horario}</h2>
@@ -626,7 +619,6 @@ function avisoLegal(ctx) {
   <p>This English version is provided for convenience. In case of discrepancy, the Spanish version prevails.</p>`,
   };
   const cuerpo = `<div class="envoltura pagina-simple legal">${textos[lang]}
-  ${pendiente("Revisar este texto con la clínica antes de publicar")}
 </div>`;
   return pagina(ctx, { titulo: ctx.T.aviso_legal, descripcion: ctx.T.aviso_legal, cuerpo });
 }
@@ -658,7 +650,6 @@ function privacidad(ctx) {
   <p>This English version is provided for convenience. In case of discrepancy, the Spanish version prevails.</p>`,
   };
   const cuerpo = `<div class="envoltura pagina-simple legal">${textos[lang]}
-  ${pendiente("Revisar este texto con la clínica antes de publicar")}
 </div>`;
   return pagina(ctx, { titulo: ctx.T.privacidad, descripcion: ctx.T.privacidad, cuerpo });
 }

@@ -7,7 +7,7 @@
       "nombre": "Pie infantil",
       "titulo_seo": "Podología infantil en Barbate",
       "principal": true,
-      "revisado": false,
+      "revisado": true,
       "resumen": "Revisiones del pie y de la forma de caminar durante el crecimiento, desde los primeros pasos hasta la adolescencia.",
       "que_es": [
         "El pie de un niño cambia mucho mientras crece. Muchas formas que preocupan a las familias, como el pie plano flexible en los primeros años, forman parte del desarrollo normal y se corrigen solas.",
@@ -47,7 +47,7 @@
       "nombre": "Pie diabético",
       "titulo_seo": "Pie diabético en Barbate",
       "principal": true,
-      "revisado": false,
+      "revisado": true,
       "resumen": "Revisión periódica y cuidado seguro de los pies en personas con diabetes, para prevenir heridas y detectar problemas a tiempo.",
       "que_es": [
         "Con los años, la diabetes puede reducir la sensibilidad y la circulación en los pies. Una pequeña rozadura o un corte al arreglarse las uñas puede pasar desapercibido y complicarse.",
@@ -90,7 +90,7 @@
       "nombre": "Estudio biomecánico de la pisada",
       "titulo_seo": "Estudio de la pisada en Barbate",
       "principal": true,
-      "revisado": false,
+      "revisado": true,
       "resumen": "Análisis de cómo apoyas y cómo caminas para entender el origen de molestias en pies, tobillos o piernas.",
       "que_es": [
         "Muchas molestias del pie, y algunas de tobillo, rodilla o cadera, están relacionadas con la forma de apoyar o de caminar.",
@@ -126,7 +126,7 @@
       "nombre": "Plantillas a medida",
       "titulo_seo": "Plantillas a medida en Barbate",
       "principal": false,
-      "revisado": false,
+      "revisado": true,
       "resumen": "Plantillas fabricadas para tu pie a partir del estudio biomecánico, para el día a día o para el deporte.",
       "que_es": [
         "Una plantilla a medida (ortesis plantar) se diseña para tu pie y para lo que necesitas: repartir la presión, mejorar el apoyo o descargar una zona dolorosa.",
@@ -159,7 +159,7 @@
       "nombre": "Quiropodología",
       "titulo_seo": "Quiropodia en Barbate: callos, durezas y uñas",
       "principal": false,
-      "revisado": false,
+      "revisado": true,
       "resumen": "Tratamiento de durezas, callos y problemas de las uñas, como las uñas encarnadas o engrosadas.",
       "que_es": [
         "La quiropodología es el tratamiento de los problemas más frecuentes de la piel y las uñas del pie: durezas, callos, uñas que se clavan o uñas engrosadas.",
@@ -194,7 +194,7 @@
       "nombre": "Pie en el deporte",
       "titulo_seo": "Podología deportiva en Barbate",
       "principal": false,
-      "revisado": false,
+      "revisado": true,
       "resumen": "Prevención y valoración de molestias del pie en quien corre, camina o practica deporte con regularidad.",
       "que_es": [
         "El deporte multiplica las cargas que soporta el pie. Rozaduras, uñas dañadas, dolor de talón o molestias que aparecen al aumentar el entrenamiento son motivos frecuentes de consulta.",

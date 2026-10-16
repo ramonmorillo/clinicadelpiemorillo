@@ -12,6 +12,7 @@
     "colegiada": "1165",
     "colegio": "Colegio Profesional de Podólogos de Andalucía",
     "formacion": [
+      "Grado en Podología por la Universidad de Sevilla",
       "Máster en Biomecánica y Ortopodología",
       "Experto Universitario en Podología del Pie Diabético y Pie Infantil",
       "Cursando el Máster en Podología Deportiva"
@@ -84,6 +85,7 @@
     "titulo": "Podiatrist",
     "colegio": "Colegio Profesional de Podólogos de Andalucía (Andalusian Professional Association of Podiatrists)",
     "formacion": [
+      "Degree in Podiatry, University of Seville",
       "Master's degree in Biomechanics and Orthopodology",
       "University Expert qualification in Diabetic Foot and Children's Podiatry",
       "Currently studying for a Master's degree in Sports Podiatry"
@@ -106,16 +108,10 @@
   },
 
   "_pendientes": {
-    "horario": "Horario tomado de Facebook vía Google. Confirmar con la clínica.",
     "nif": "Necesario para el aviso legal.",
-    "whatsapp": "Confirmar que el 660 48 60 65 atiende WhatsApp.",
     "seguros": "¿Trabaja con alguna aseguradora? Google la asocia a Caser.",
     "domicilio": "¿Atiende a domicilio? Aparece en directorios antiguos.",
-    "formacion": "Añadir titulación de base (Grado o Diplomatura en Podología) y universidad, si se quiere mostrar.",
     "redes": "URL de la página de Facebook.",
-    "traduccion_en": "La versión en inglés es una traducción propuesta: revisar con Carmen (sobre todo los textos clínicos y la denominación de su formación).",
-    "estudio_biomecanico": "En las fotos se ven una cinta de andar y una plataforma: confirmar si es de presiones (modelo) y si se graba vídeo, para describir el estudio con exactitud.",
-    "resenas": "Falta el enlace para escribir una reseña en Google (opiniones → PENDIENTE_ENLACE_RESENA).",
-    "instalaciones": "Pies de foto y textos alternativos de las instalaciones redactados a partir de las fotos: confirmar con Carmen el nombre de cada sala."
+    "resenas": "Falta el enlace para escribir una reseña en Google (opiniones → PENDIENTE_ENLACE_RESENA)."
   }
 }
