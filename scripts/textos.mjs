@@ -100,7 +100,6 @@ export const UI = {
       `La forma más rápida de pedir cita es llamar o escribir por WhatsApp. Te atenderá ${n} en su consulta.`,
     direccion: "Dirección",
     abrir_mapa: "Abrir en Google Maps",
-    acceso: "Acceso",
     aviso_datos: "Por tu privacidad, no envíes fotos ni detalles médicos por WhatsApp si no te los pedimos. Lo hablaremos en consulta.",
     contacto_desc: (n, d, t) => `Pide cita en ${n}: ${d}. Teléfono ${t}.`,
     // pie
@@ -189,7 +188,6 @@ export const UI = {
       `The quickest way to book is to call or send a WhatsApp message. You will be seen by ${n} at her practice.`,
     direccion: "Address",
     abrir_mapa: "Open in Google Maps",
-    acceso: "Access",
     aviso_datos: "To protect your privacy, please don't send photos or medical details by WhatsApp unless we ask for them. We'll talk about it at your appointment.",
     contacto_desc: (n, d, t) => `Book an appointment at ${n}: ${d}. Phone ${t}.`,
     pie_consulta: "Practice",
