@@ -1,0 +1,234 @@
+{
+  "_instrucciones": "Contenido de cada servicio. 'revisado' debe pasar a true solo cuando la podóloga haya leído y aprobado el texto. 'principal' = aparece destacado en la portada.",
+
+  "servicios": [
+    {
+      "slug": "pie-infantil",
+      "nombre": "Pie infantil",
+      "titulo_seo": "Podología infantil en Barbate",
+      "principal": true,
+      "revisado": false,
+      "resumen": "Revisiones del pie y de la forma de caminar durante el crecimiento, desde los primeros pasos hasta la adolescencia.",
+      "que_es": [
+        "El pie de un niño cambia mucho mientras crece. Muchas formas que preocupan a las familias, como el pie plano flexible en los primeros años, forman parte del desarrollo normal y se corrigen solas.",
+        "La revisión podológica sirve para distinguir lo que es propio de la edad de lo que conviene vigilar o tratar, y para orientar sobre el calzado adecuado en cada etapa."
+      ],
+      "cuando_consultar": [
+        "Se queja de dolor en los pies, tobillos o piernas, o se cansa antes que otros niños.",
+        "Tropieza o se cae con frecuencia.",
+        "Camina de puntillas de forma habitual pasados los primeros años.",
+        "Mete los pies hacia dentro o hacia fuera de forma muy marcada.",
+        "Desgasta el calzado de forma muy desigual.",
+        "Tiene una uña que se clava o una verruga en la planta del pie."
+      ],
+      "que_hacemos": [
+        "Exploración del pie y de la pierna, con el niño tumbado y de pie.",
+        "Observación de cómo camina.",
+        "Explicación a la familia de lo que es normal para su edad.",
+        "Si hace falta: seguimiento, ejercicios, consejo de calzado o plantillas a medida."
+      ],
+      "faq": [
+        {
+          "p": "¿Mi hijo tiene el pie plano, necesita plantillas?",
+          "r": "No siempre. En los primeros años el arco del pie todavía se está formando y un pie plano flexible que no duele suele ser normal. Tras explorarlo te explicaremos si conviene tratarlo o solo vigilarlo."
+        },
+        {
+          "p": "¿A qué edad hago la primera revisión?",
+          "r": "No hay una edad obligatoria. Es buen momento cuando el niño ya camina con soltura o en cuanto notes algo que te preocupe."
+        },
+        {
+          "p": "¿Qué calzado es mejor para un niño?",
+          "r": "En general, uno flexible, ligero, de su talla y bien sujeto al pie. En consulta te orientamos según la edad y la actividad del niño."
+        }
+      ]
+    },
+    {
+      "slug": "pie-diabetico",
+      "nombre": "Pie diabético",
+      "titulo_seo": "Pie diabético en Barbate",
+      "principal": true,
+      "revisado": false,
+      "resumen": "Revisión periódica y cuidado seguro de los pies en personas con diabetes, para prevenir heridas y detectar problemas a tiempo.",
+      "que_es": [
+        "Con los años, la diabetes puede reducir la sensibilidad y la circulación en los pies. Una pequeña rozadura o un corte al arreglarse las uñas puede pasar desapercibido y complicarse.",
+        "La revisión podológica permite conocer el nivel de riesgo de cada pie y cuidarlo de forma segura. Es un complemento al seguimiento de tu médico y de la enfermería de tu centro de salud, no lo sustituye."
+      ],
+      "cuando_consultar": [
+        "Tienes diabetes y nunca te han revisado los pies.",
+        "Notas hormigueo, adormecimiento o menos sensibilidad en los pies.",
+        "Tienes durezas, callos o uñas engrosadas que no puedes arreglarte con seguridad.",
+        "Has tenido una herida en el pie que tardó en curar."
+      ],
+      "aviso_urgente": {
+        "titulo": "Cuándo no esperar a la cita",
+        "texto": "Acude a tu médico o a urgencias el mismo día si tienes una herida que no mejora, una zona roja, caliente o hinchada, un cambio de color en un dedo (oscuro o azulado), mal olor o fiebre."
+      },
+      "que_hacemos": [
+        "Exploración de la sensibilidad, de los pulsos, de la piel, de las uñas y de la forma del pie.",
+        "Valoración del nivel de riesgo y de cada cuánto conviene revisarse.",
+        "Tratamiento seguro de durezas, callos y uñas.",
+        "Consejos de cuidado diario y de calzado.",
+        "Si hace falta: plantillas que reparten la presión del apoyo."
+      ],
+      "faq": [
+        {
+          "p": "¿Cada cuánto tengo que revisarme los pies?",
+          "r": "Depende del riesgo. Puede ir desde una vez al año, si el riesgo es bajo, hasta cada pocos meses, si es alto. Te lo indicaremos tras la primera exploración."
+        },
+        {
+          "p": "¿Puedo cortarme las uñas y quitarme las durezas en casa?",
+          "r": "Las uñas, con cuidado y en recto si ves y llegas bien. Las durezas, mejor no con cuchillas ni callicidas: con diabetes es fácil hacerse una herida sin notarlo."
+        },
+        {
+          "p": "¿Qué tengo que mirar cada día?",
+          "r": "Revisa los pies con buena luz (con un espejo si no llegas): heridas, ampollas, rojeces o cambios de color. Revisa también el interior del zapato antes de ponértelo."
+        }
+      ]
+    },
+    {
+      "slug": "estudio-biomecanico",
+      "nombre": "Estudio biomecánico de la pisada",
+      "titulo_seo": "Estudio de la pisada en Barbate",
+      "principal": true,
+      "revisado": false,
+      "resumen": "Análisis de cómo apoyas y cómo caminas para entender el origen de molestias en pies, tobillos o piernas.",
+      "que_es": [
+        "Muchas molestias del pie, y algunas de tobillo, rodilla o cadera, están relacionadas con la forma de apoyar o de caminar.",
+        "El estudio biomecánico analiza la estructura del pie y su movimiento para encontrar la causa y decidir el tratamiento. No todos los casos necesitan plantillas."
+      ],
+      "cuando_consultar": [
+        "Te duele el talón, sobre todo en los primeros pasos de la mañana.",
+        "Tienes dolor en la planta, en la parte delantera del pie.",
+        "Se te cansan mucho los pies o las piernas al caminar o estar de pie.",
+        "Tienes molestias de tobillo o rodilla que empeoran al caminar o correr.",
+        "Vas a empezar a correr o a hacer deporte con regularidad."
+      ],
+      "que_hacemos": [
+        "Entrevista sobre tus molestias, tu actividad y tu calzado.",
+        "Exploración del pie y de la pierna en camilla.",
+        "Valoración del apoyo de pie, en reposo.",
+        "Análisis de cómo caminas y, si practicas deporte, de cómo corres.",
+        "Explicación clara del resultado y propuesta de tratamiento."
+      ],
+      "faq": [
+        {
+          "p": "¿Cuánto dura el estudio?",
+          "r": "Normalmente entre 45 y 60 minutos, según el caso. Trae el calzado que más uses y ropa cómoda."
+        },
+        {
+          "p": "¿Siempre acaba en plantillas?",
+          "r": "No. Según el resultado, el tratamiento puede ser un cambio de calzado, ejercicios, plantillas o una combinación."
+        }
+      ]
+    },
+    {
+      "slug": "plantillas-a-medida",
+      "nombre": "Plantillas a medida",
+      "titulo_seo": "Plantillas a medida en Barbate",
+      "principal": false,
+      "revisado": false,
+      "resumen": "Plantillas fabricadas para tu pie a partir del estudio biomecánico, para el día a día o para el deporte.",
+      "que_es": [
+        "Una plantilla a medida (ortesis plantar) se diseña para tu pie y para lo que necesitas: repartir la presión, mejorar el apoyo o descargar una zona dolorosa.",
+        "A diferencia de una plantilla de serie, se fabrica a partir de un molde de tu pie y de la exploración previa."
+      ],
+      "cuando_consultar": [
+        "Tras un estudio biomecánico que indique que pueden ayudarte.",
+        "Si ya usas plantillas y están desgastadas o han dejado de hacerte efecto."
+      ],
+      "que_hacemos": [
+        "Estudio biomecánico previo.",
+        "Toma del molde del pie.",
+        "Diseño y fabricación de la plantilla.",
+        "Entrega con prueba en tu calzado.",
+        "Revisión para comprobar que se adapta bien."
+      ],
+      "faq": [
+        {
+          "p": "¿Cuánto duran unas plantillas?",
+          "r": "Depende del material, del uso y de la actividad. En las revisiones comprobamos su estado y te avisamos cuando convenga renovarlas."
+        },
+        {
+          "p": "¿Valen para cualquier zapato?",
+          "r": "Se diseñan para un tipo de calzado concreto (diario, deportivo o de vestir). Si usas varios tipos, lo comentamos al hacerlas."
+        }
+      ]
+    },
+    {
+      "slug": "quiropodologia",
+      "nombre": "Quiropodología",
+      "titulo_seo": "Quiropodia en Barbate: callos, durezas y uñas",
+      "principal": false,
+      "revisado": false,
+      "resumen": "Tratamiento de durezas, callos y problemas de las uñas, como las uñas encarnadas o engrosadas.",
+      "que_es": [
+        "La quiropodología es el tratamiento de los problemas más frecuentes de la piel y las uñas del pie: durezas, callos, uñas que se clavan o uñas engrosadas.",
+        "Se realiza con instrumental estéril y adaptada a cada persona, con especial cuidado en personas mayores y en personas con diabetes o problemas de circulación."
+      ],
+      "cuando_consultar": [
+        "Te duele un callo o una dureza al caminar.",
+        "Tienes una uña que se clava, enrojecida o inflamada.",
+        "Tus uñas están engrosadas o deformadas y no puedes cortarlas tú.",
+        "Prefieres que el cuidado de tus pies lo haga una profesional sanitaria."
+      ],
+      "que_hacemos": [
+        "Exploración y valoración de la causa (calzado, forma del pie, apoyo).",
+        "Eliminación de durezas y callos.",
+        "Corte y fresado de uñas.",
+        "Tratamiento de la uña encarnada.",
+        "Consejos para evitar que vuelvan a aparecer."
+      ],
+      "faq": [
+        {
+          "p": "¿Es doloroso?",
+          "r": "Habitualmente se tolera bien. Si una zona está muy sensible o inflamada, lo valoramos y adaptamos el tratamiento."
+        },
+        {
+          "p": "¿Por qué vuelven a salir los callos?",
+          "r": "Porque suelen deberse a un roce o a una presión que se repite. Por eso, además de tratarlos, buscamos la causa: calzado, forma del pie o forma de apoyar."
+        }
+      ]
+    },
+    {
+      "slug": "podologia-deportiva",
+      "nombre": "Pie en el deporte",
+      "titulo_seo": "Podología deportiva en Barbate",
+      "principal": false,
+      "revisado": false,
+      "resumen": "Prevención y valoración de molestias del pie en quien corre, camina o practica deporte con regularidad.",
+      "que_es": [
+        "El deporte multiplica las cargas que soporta el pie. Rozaduras, uñas dañadas, dolor de talón o molestias que aparecen al aumentar el entrenamiento son motivos frecuentes de consulta.",
+        "La valoración podológica busca que puedas seguir con tu actividad con menos molestias y menos riesgo de lesión."
+      ],
+      "cuando_consultar": [
+        "Tienes dolor en el pie o el tobillo que aparece al hacer deporte.",
+        "Te salen ampollas, durezas o uñas negras con frecuencia.",
+        "Quieres consejo para elegir calzado deportivo.",
+        "Vas a preparar una carrera o a aumentar tu entrenamiento."
+      ],
+      "que_hacemos": [
+        "Exploración del pie y estudio de cómo corres o te mueves en tu deporte.",
+        "Consejo de calzado deportivo.",
+        "Plantillas deportivas, si están indicadas.",
+        "Tratamiento de durezas, ampollas y uñas dañadas."
+      ],
+      "faq": [
+        {
+          "p": "¿Necesito plantillas para correr?",
+          "r": "No necesariamente. Muchas personas corren sin ellas. Se valoran cuando hay molestias o una alteración del apoyo que lo justifique."
+        }
+      ]
+    }
+  ],
+
+  "motivos": [
+    { "texto": "Me duele el talón al levantarme", "servicio": "estudio-biomecanico" },
+    { "texto": "Tengo una uña que se me clava", "servicio": "quiropodologia" },
+    { "texto": "Mi hijo camina de puntillas o tropieza mucho", "servicio": "pie-infantil" },
+    { "texto": "Tengo diabetes y nunca me han revisado los pies", "servicio": "pie-diabetico" },
+    { "texto": "Tengo callos o durezas que me molestan", "servicio": "quiropodologia" },
+    { "texto": "Corro y me molestan los pies", "servicio": "podologia-deportiva" },
+    { "texto": "Mis plantillas ya no me hacen efecto", "servicio": "plantillas-a-medida" },
+    { "texto": "Se me cansan mucho los pies al caminar", "servicio": "estudio-biomecanico" }
+  ]
+}

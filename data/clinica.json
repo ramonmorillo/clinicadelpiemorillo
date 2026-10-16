@@ -1,0 +1,77 @@
+{
+  "_instrucciones": "Fuente única de datos de la web. Cualquier cambio aquí se refleja en todas las páginas y en los datos para Google. Tras editar, ejecutar: npm run build. Los campos marcados en _pendientes se muestran resaltados mientras modo = 'borrador'.",
+
+  "modo": "borrador",
+  "url_publica": "https://clinicadelpiemorillo.es",
+
+  "nombre_comercial": "Clínica del Pie Morillo",
+  "profesional": {
+    "nombre": "Carmen María Morillo Verdugo",
+    "nombre_corto": "Carmen Morillo",
+    "titulo": "Podóloga",
+    "colegiada": "1165",
+    "colegio": "Colegio Profesional de Podólogos de Andalucía",
+    "formacion": [
+      "Máster en Biomecánica y Ortopodología",
+      "Experto Universitario en Podología del Pie Diabético y Pie Infantil",
+      "Cursando el Máster en Podología Deportiva"
+    ],
+    "foto": ""
+  },
+
+  "lema": "Cuando el corazón habla por nuestros pies",
+
+  "direccion": {
+    "calle": "C/ Barberán y Collar, 25",
+    "cp": "11160",
+    "localidad": "Barbate",
+    "provincia": "Cádiz",
+    "comunidad": "Andalucía",
+    "mapa_url": "https://www.google.com/maps/search/?api=1&query=Barber%C3%A1n+y+Collar+25+11160+Barbate"
+  },
+
+  "telefono": "660 48 60 65",
+  "telefono_e164": "+34660486065",
+  "whatsapp": true,
+  "whatsapp_mensaje": "Hola, quería pedir cita en la clínica.",
+  "email": "",
+
+  "horario": [
+    { "dia": 1, "tramos": [["09:30", "14:00"]] },
+    { "dia": 2, "tramos": [["09:30", "14:00"], ["15:30", "19:00"]] },
+    { "dia": 3, "tramos": [["09:30", "14:00"]] },
+    { "dia": 4, "tramos": [["09:30", "14:00"], ["15:30", "19:00"]] },
+    { "dia": 5, "tramos": [["09:30", "14:00"]] },
+    { "dia": 6, "tramos": [] },
+    { "dia": 0, "tramos": [] }
+  ],
+  "horario_nota": "Atención con cita previa.",
+
+  "registro_sanitario": "",
+  "nif": "",
+  "seguros": [],
+  "domicilio": null,
+
+  "url_agenda": "",
+
+  "zona": ["Barbate", "Zahara de los Atunes", "Caños de Meca", "Vejer de la Frontera"],
+
+  "redes": {
+    "facebook": "",
+    "instagram": ""
+  },
+
+  "_pendientes": {
+    "nombre_comercial": "Confirmar nombre comercial definitivo (tarjeta: «Clínica del Pie Podóloga Morillo»; Google: «Clínica del Pie Morillo»).",
+    "horario": "Horario tomado de Facebook vía Google. Confirmar con la clínica.",
+    "registro_sanitario": "Nº de inscripción en el Registro de Centros Sanitarios de Andalucía.",
+    "nif": "Necesario para el aviso legal.",
+    "foto": "Foto real de la podóloga (retrato vertical, luz natural).",
+    "whatsapp": "Confirmar que el 660 48 60 65 atiende WhatsApp.",
+    "seguros": "¿Trabaja con alguna aseguradora? Google la asocia a Caser.",
+    "domicilio": "¿Atiende a domicilio? Aparece en directorios antiguos.",
+    "formacion": "Añadir titulación de base (Grado o Diplomatura en Podología) y universidad, si se quiere mostrar.",
+    "redes": "URL de la página de Facebook.",
+    "estudio_biomecanico": "Confirmar equipamiento (plataforma de presiones, cinta, vídeo) para describirlo con exactitud."
+  }
+}

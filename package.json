@@ -1,0 +1,15 @@
+{
+  "name": "clinicadelpiemorillo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web de la Clínica del Pie Morillo (Barbate)",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:preview": "node scripts/build.mjs --preview",
+    "serve": "npx --yes serve dist"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
