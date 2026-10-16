@@ -159,21 +159,28 @@ function galeria(ctx) {
   const lista = C.instalaciones || [];
   if (!lista.length) return "";
   const ratio = { vertical: [4, 5], horizontal: [3, 2] };
-  const figura = (i, n) => {
+  // La foto "destacada" va a todo el ancho, encima del mosaico.
+  const figura = (i, n, destacada = false) => {
     const { titulo, alt } = ctx.L.clinica.instalacion(i);
     const [a, b] = ratio[i.formato] || ratio.horizontal;
     const src = (w, ext) => ctx.ruta(`assets/img/instalaciones/${i.archivo}-${w}.${ext}`);
-    return `<figure class="galeria-foto galeria-${i.formato}" style="--orden:${n}"><picture>
-      <source type="image/webp" srcset="${[480, 800, 1200].map((w) => `${src(w, "webp")} ${w}w`).join(", ")}" sizes="(min-width: 820px) 540px, 100vw">
-      <img src="${src(800, "jpg")}" alt="${esc(alt)}" width="800" height="${Math.round((800 * b) / a)}" loading="lazy" decoding="async">
+    const anchos = destacada ? [480, 800, 1200, 1600] : [480, 800, 1200];
+    const respaldo = destacada ? 1200 : 800;
+    const sizes = destacada ? "(min-width: 1200px) 1160px, 100vw" : "(min-width: 820px) 540px, 100vw";
+    return `<figure class="galeria-foto galeria-${destacada ? "destacada" : i.formato}" style="--orden:${n}"><picture>
+      <source type="image/webp" srcset="${anchos.map((w) => `${src(w, "webp")} ${w}w`).join(", ")}" sizes="${sizes}">
+      <img src="${src(respaldo, "jpg")}" alt="${esc(alt)}" width="${respaldo}" height="${Math.round((respaldo * b) / a)}" loading="lazy" decoding="async">
     </picture><figcaption>${esc(titulo)}</figcaption></figure>`;
   };
+  const principal = lista.find((i) => i.destacada);
+  const resto = lista.filter((i) => !i.destacada);
   // Columna 1: posiciones 0 y 2; columna 2: posiciones 1 y 3
-  const col = (r) => lista.map((i, n) => [i, n]).filter(([, n]) => n % 2 === r).map(([i, n]) => figura(i, n)).join("");
+  const col = (r) => resto.map((i, n) => [i, n]).filter(([, n]) => n % 2 === r).map(([i, n]) => figura(i, n)).join("");
   return `<section class="bloque galeria-bloque" aria-labelledby="galeria-t">
   <div class="envoltura">
     <h2 id="galeria-t">${ctx.T.instalaciones_t}</h2>
     <p class="bloque-intro">${ctx.T.instalaciones_intro} ${pendiente("Confirmar con Carmen los nombres de cada sala")}</p>
+    ${principal ? figura(principal, 0, true) : ""}
     <div class="galeria"><div class="galeria-col">${col(0)}</div><div class="galeria-col">${col(1)}</div></div>
   </div>
 </section>`;

@@ -59,9 +59,10 @@
   "url_agenda": "",
 
   "instalaciones": [
+    { "archivo": "gabinete", "formato": "horizontal", "destacada": true, "titulo": "Gabinete de podología", "alt": "Gabinete de podología: sillón clínico azul, equipo de trabajo y mesa de consulta, con los diplomas de la podóloga en la pared y un mural con los servicios de la clínica" },
     { "archivo": "sala-espera", "formato": "horizontal", "titulo": "Sala de espera", "alt": "Sala de espera de la clínica: sofá gris, butaca y dispensador de agua junto a un ventanal con los servicios de la consulta rotulados" },
     { "archivo": "entrada", "formato": "vertical", "titulo": "Entrada", "alt": "Zona de entrada con dos butacas tapizadas en gris y un atril blanco de bienvenida con el nombre de la clínica" },
-    { "archivo": "recepcion", "formato": "vertical", "titulo": "Recepción", "alt": "Recepción con escritorio blanco ante un mural en blanco y negro de unos pies de bebé sobre un pantalán junto al mar, con el nombre de la clínica" },
+    { "archivo": "recepcion", "formato": "vertical", "titulo": "Mesa de consulta", "alt": "Mesa de consulta con escritorio blanco ante un mural en blanco y negro de unos pies de bebé sobre un pantalán junto al mar, con el nombre de la clínica" },
     { "archivo": "estudio-pisada", "formato": "horizontal", "titulo": "Sala de estudio de la pisada", "alt": "Sala amplia y luminosa con cinta de andar, plataforma para el estudio de la pisada y camilla corrida, decorada con dibujos infantiles" }
   ],
 
@@ -85,9 +86,10 @@
     "horario_nota": "By appointment only.",
     "whatsapp_mensaje": "Hello, I would like to book an appointment at the clinic.",
     "instalaciones": {
+      "gabinete": { "titulo": "Treatment room", "alt": "Podiatry treatment room: blue clinical chair, work unit and consultation desk, with the podiatrist's diplomas on the wall and a mural listing the clinic's services" },
       "sala-espera": { "titulo": "Waiting room", "alt": "The clinic's waiting room: grey sofa, armchair and water cooler beside a large window displaying the practice's services" },
       "entrada": { "titulo": "Entrance", "alt": "Entrance area with two grey upholstered armchairs and a white welcome stand bearing the clinic's name" },
-      "recepcion": { "titulo": "Reception", "alt": "Reception desk in front of a black-and-white mural of a baby's feet over a seaside pier, with the clinic's name" },
+      "recepcion": { "titulo": "Consultation desk", "alt": "Consultation desk in front of a black-and-white mural of a baby's feet over a seaside pier, with the clinic's name" },
       "estudio-pisada": { "titulo": "Gait analysis room", "alt": "Bright, spacious room with a treadmill, a gait analysis platform and a built-in treatment bench, decorated with children's drawings" }
     },
     "fotos_alt": {
