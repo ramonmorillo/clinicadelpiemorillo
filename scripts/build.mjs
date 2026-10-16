@@ -123,6 +123,7 @@ const ICONO = {
   mapa: `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>`,
   sig: `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>`,
   menu: `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>`,
+  externo: `<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>`,
   idioma: `<svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.6 5.2 3.6 8.5S14.4 18.1 12 20.5M12 3.5C9.6 5.9 8.4 8.7 8.4 12s1.2 6.1 3.6 8.5"/></svg>`,
 };
 
@@ -182,6 +183,27 @@ function galeria(ctx) {
     <p class="bloque-intro">${ctx.T.instalaciones_intro} ${pendiente("Confirmar con Carmen los nombres de cada sala")}</p>
     ${principal ? figura(principal, 0, true) : ""}
     <div class="galeria"><div class="galeria-col">${col(0)}</div><div class="galeria-col">${col(1)}</div></div>
+  </div>
+</section>`;
+}
+
+// Opiniones: solo enlaces a Google. Sin reseñas copiadas, sin puntuaciones,
+// sin widgets ni datos estructurados de valoraciones.
+function opiniones(ctx) {
+  const o = C.opiniones || {};
+  if (!o.url_ver) return "";
+  const { T } = ctx;
+  const externo = (url, clase, texto) =>
+    `<a class="boton ${clase}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${ICONO.externo}<span>${texto}<span class="sr"> ${T.ventana_nueva}</span></span></a>`;
+  return `<section class="bloque opiniones-bloque" id="opiniones" aria-labelledby="opiniones-t">
+  <div class="envoltura">
+    <h2 id="opiniones-t">${T.opiniones_t}</h2>
+    <p class="bloque-intro">${T.opiniones_txt}</p>
+    <div class="acciones">
+      ${externo(o.url_ver, "boton-tinta", T.opiniones_ver)}
+      ${o.PENDIENTE_ENLACE_RESENA ? externo(o.PENDIENTE_ENLACE_RESENA, "boton-claro", T.opiniones_dejar) : ""}
+    </div>
+    ${o.PENDIENTE_ENLACE_RESENA ? "" : pendiente("Falta el enlace para dejar una reseña en Google: el botón «Déjanos tu opinión» aparecerá al añadirlo")}
   </div>
 </section>`;
 }
@@ -414,6 +436,8 @@ function inicio(ctx) {
 </section>
 
 ${galeria(ctx)}
+
+${opiniones(ctx)}
 
 <section class="bloque visita-bloque" aria-labelledby="visita-t">
   <div class="envoltura visita-rejilla">
