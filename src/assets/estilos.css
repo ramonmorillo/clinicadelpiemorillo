@@ -287,6 +287,11 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
   .galeria-col:last-child { margin-top: 4rem; }
 }
 
+/* Opiniones: enlaces a Google, sin reseñas copiadas */
+.opiniones-bloque { background: var(--bruma); }
+.opiniones-bloque .bloque-intro { margin-bottom: 0.5rem; }
+.opiniones-bloque .boton-claro { background: var(--sal); }
+
 /* Dónde estamos */
 .visita-rejilla { display: grid; gap: 2.5rem; }
 @media (min-width: 820px) { .visita-rejilla { grid-template-columns: 1fr 1fr; gap: 4rem; } }

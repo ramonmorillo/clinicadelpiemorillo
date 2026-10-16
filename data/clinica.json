@@ -58,6 +58,12 @@
 
   "url_agenda": "",
 
+  "opiniones": {
+    "_nota": "Enlaces a las reseñas de Google (sección «Opiniones de nuestros pacientes» de la portada). No se copian reseñas ni puntuaciones en la web. PENDIENTE_ENLACE_RESENA: pegar aquí el enlace de Google Business para escribir una reseña (Perfil de empresa → «Pedir reseñas»). Mientras esté vacío, el botón «Déjanos tu opinión» no aparece.",
+    "url_ver": "https://share.google/rbueRuSVG8LY7ZQ7B",
+    "PENDIENTE_ENLACE_RESENA": ""
+  },
+
   "instalaciones": [
     { "archivo": "gabinete", "formato": "horizontal", "destacada": true, "titulo": "Gabinete de podología", "alt": "Gabinete de podología: sillón clínico azul, equipo de trabajo y mesa de consulta, con los diplomas de la podóloga en la pared y un mural con los servicios de la clínica" },
     { "archivo": "sala-espera", "formato": "horizontal", "titulo": "Sala de espera", "alt": "Sala de espera de la clínica: sofá gris, butaca y dispensador de agua junto a un ventanal con los servicios de la consulta rotulados" },
@@ -109,6 +115,7 @@
     "redes": "URL de la página de Facebook.",
     "traduccion_en": "La versión en inglés es una traducción propuesta: revisar con Carmen (sobre todo los textos clínicos y la denominación de su formación).",
     "estudio_biomecanico": "En las fotos se ven una cinta de andar y una plataforma: confirmar si es de presiones (modelo) y si se graba vídeo, para describir el estudio con exactitud.",
+    "resenas": "Falta el enlace para escribir una reseña en Google (opiniones → PENDIENTE_ENLACE_RESENA).",
     "instalaciones": "Pies de foto y textos alternativos de las instalaciones redactados a partir de las fotos: confirmar con Carmen el nombre de cada sala."
   }
 }
