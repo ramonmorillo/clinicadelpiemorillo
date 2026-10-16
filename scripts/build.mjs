@@ -153,6 +153,7 @@ ${BORRADOR ? '<meta name="robots" content="noindex, nofollow">' : ""}
 <meta property="og:title" content="${esc(tituloCompleto)}">
 <meta property="og:description" content="${esc(descripcion)}">
 <meta property="og:locale" content="es_ES">
+<meta property="og:image" content="${C.url_publica}/assets/img/fotos/consulta-1000.jpg">
 <meta name="theme-color" content="#18506B">
 <link rel="icon" href="${ruta("assets/img/favicon.svg")}" type="image/svg+xml">
 <link rel="preload" href="${ruta("assets/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2")}" as="font" type="font/woff2" crossorigin>
@@ -298,7 +299,7 @@ function inicio() {
 
 <section class="bloque quien-bloque" aria-labelledby="quien-t">
   <div class="envoltura quien-rejilla">
-    ${retrato()}
+    ${foto(ruta, "inicio", { sizes: "(min-width: 820px) 420px, 280px" })}
     <div>
       <h2 id="quien-t">Quién te atiende</h2>
       <p class="quien-nombre">${esc(p.nombre)}</p>
@@ -340,11 +341,23 @@ function inicio() {
   });
 }
 
-function retrato() {
-  const foto = C.profesional.foto;
-  if (foto)
-    return `<figure class="retrato"><img src="${foto}" alt="${esc(C.profesional.nombre)} en su consulta" width="600" height="750" loading="lazy"></figure>`;
-  return `<figure class="retrato retrato-vacio" aria-hidden="true"><span>Foto de ${esc(C.profesional.nombre_corto)}</span>${pendiente("Foto pendiente")}</figure>`;
+// Fotos: src/assets/img/fotos/<archivo>-<ancho>.webp (+ .jpg de respaldo)
+const FOTO_TAM = {
+  vertical: { anchos: [440, 700, 1000], respaldo: 700, alto: (w) => Math.round((w * 5) / 4) },
+  horizontal: { anchos: [640, 1000, 1500], respaldo: 1000, alto: (w) => Math.round((w * 2) / 3) },
+};
+
+function foto(ruta, clave, { formato = "vertical", sizes, clase = "retrato", carga = "lazy" } = {}) {
+  const f = (C.profesional.fotos || {})[clave];
+  if (!f)
+    return `<figure class="${clase} retrato-vacio" aria-hidden="true"><span>Foto de ${esc(C.profesional.nombre_corto)}</span>${pendiente("Foto pendiente")}</figure>`;
+  const t = FOTO_TAM[formato];
+  const base = (w, ext) => ruta(`assets/img/fotos/${f.archivo}-${w}.${ext}`);
+  const srcset = t.anchos.map((w) => `${base(w, "webp")} ${w}w`).join(", ");
+  return `<figure class="${clase}"><picture>
+    <source type="image/webp" srcset="${srcset}" sizes="${sizes}">
+    <img src="${base(t.respaldo, "jpg")}" alt="${esc(f.alt)}" width="${t.respaldo}" height="${t.alto(t.respaldo)}" loading="${carga}" decoding="async">
+  </picture></figure>`;
 }
 
 function paginaServicio(s) {
@@ -425,7 +438,7 @@ function sobreMi() {
   const cuerpo = `
 <div class="envoltura pagina-simple">
   <div class="quien-rejilla">
-    ${retrato()}
+    ${foto(ruta, "sobre_mi", { sizes: "(min-width: 820px) 420px, 280px", carga: "eager" })}
     <div>
       <h1>Sobre mí</h1>
       <p class="entradilla">Soy ${esc(p.nombre_corto)}, podóloga en Barbate. Atiendo en mi consulta de la calle Barberán y Collar a familias, personas mayores, pacientes con diabetes y deportistas.</p>
@@ -453,9 +466,14 @@ function contacto() {
   const ruta = crearRuta(1);
   const cuerpo = `
 <div class="envoltura pagina-simple">
-  <h1>Contacto y cómo llegar</h1>
-  <p class="entradilla">La forma más rápida de pedir cita es llamar o escribir por WhatsApp.</p>
-  ${botonesContacto()}
+  <div class="contacto-cabecera">
+    <div>
+      <h1>Contacto y cómo llegar</h1>
+      <p class="entradilla">La forma más rápida de pedir cita es llamar o escribir por WhatsApp. Te atenderá ${esc(C.profesional.nombre_corto)} en su consulta.</p>
+      ${botonesContacto()}
+    </div>
+    ${foto(ruta, "consulta", { formato: "horizontal", clase: "foto-ancha", sizes: "(min-width: 900px) 540px, 100vw", carga: "eager" })}
+  </div>
   <div class="visita-rejilla contacto-rejilla">
     <div>
       <h2>Dirección</h2>

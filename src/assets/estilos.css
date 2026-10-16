@@ -263,7 +263,8 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 .quien-rejilla { display: grid; gap: 2rem; align-items: start; }
 @media (min-width: 820px) { .quien-rejilla { grid-template-columns: minmax(240px, 0.8fr) 1.2fr; gap: 3.5rem; } }
 .retrato { margin: 0; border-radius: var(--radio); overflow: hidden; aspect-ratio: 4 / 5; background: var(--piel); max-width: 420px; }
-.retrato img { width: 100%; height: 100%; object-fit: cover; }
+.retrato img, .foto-ancha img { width: 100%; height: 100%; object-fit: cover; }
+.retrato picture, .foto-ancha picture { display: block; height: 100%; }
 .retrato-vacio { display: grid; place-content: center; justify-items: center; gap: 0.5rem; color: var(--gris); text-align: center; padding: 1rem; }
 .quien-nombre { font-size: 1.3em; font-weight: 700; margin-bottom: 0.3em; }
 .formacion { list-style: none; margin: 1.25rem 0; display: grid; gap: 0.6rem; }
@@ -362,3 +363,9 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 
 .acciones.apiladas .boton { font-size: 1rem; padding-inline: 1rem; white-space: nowrap; }
 @media (max-width: 819px) { .retrato { max-width: 280px; } }
+
+/* Contacto: texto y foto de la consulta */
+.contacto-cabecera { display: grid; gap: 2rem; align-items: center; }
+@media (min-width: 900px) { .contacto-cabecera { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; } }
+.foto-ancha { margin: 0; border-radius: var(--radio); overflow: hidden; aspect-ratio: 3 / 2; max-width: 100%; background: var(--bruma); }
+.foto-ancha img { object-position: 60% 50%; }
