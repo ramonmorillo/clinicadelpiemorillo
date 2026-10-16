@@ -11,6 +11,7 @@ La web está en español (raíz) y en inglés (`/en/`). Cada página enlaza con 
 | Quiero cambiar… | Archivo |
 |---|---|
 | Teléfono, dirección, horario, nº de registro, NIF, foto, formación | `data/clinica.json` |
+| Fotos de la consulta (portada, apartado «La consulta») | Imágenes en `src/assets/img/instalaciones/`; títulos y descripciones en `data/clinica.json` → `instalaciones` (y `en.instalaciones`) |
 | Textos de los servicios y los motivos de consulta de la portada | `data/servicios.json` (español) y `data/servicios.en.json` (inglés) |
 | Textos de la clínica en inglés (lema, formación, nota del horario) | `data/clinica.json`, apartado `"en"` |
 | Textos fijos de la web (menús, botones, títulos de sección) en ambos idiomas | `scripts/textos.mjs` |

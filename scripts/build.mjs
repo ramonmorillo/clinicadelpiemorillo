@@ -34,6 +34,7 @@ const CONTENIDO = {
       horario_nota: C.horario_nota,
       whatsapp_mensaje: C.whatsapp_mensaje,
       alt: (k) => C.profesional.fotos?.[k]?.alt || "",
+      instalacion: (i) => ({ titulo: i.titulo, alt: i.alt }),
     },
   },
   en: {
@@ -51,6 +52,7 @@ const CONTENIDO = {
       horario_nota: C.en.horario_nota,
       whatsapp_mensaje: C.en.whatsapp_mensaje,
       alt: (k) => C.en.fotos_alt?.[k] || C.profesional.fotos?.[k]?.alt || "",
+      instalacion: (i) => C.en.instalaciones?.[i.archivo] || { titulo: i.titulo, alt: i.alt },
     },
   },
 };
@@ -148,6 +150,33 @@ function foto(ctx, clave, { formato = "vertical", sizes, clase = "retrato", carg
     <source type="image/webp" srcset="${srcset}" sizes="${sizes}">
     <img src="${base(t.respaldo, "jpg")}" alt="${esc(ctx.L.clinica.alt(clave))}" width="${t.respaldo}" height="${t.alto(t.respaldo)}" loading="${carga}" decoding="async">
   </picture></figure>`;
+}
+
+// Galería de las instalaciones: src/assets/img/instalaciones/<archivo>-<ancho>.webp (+ -800.jpg)
+// Dos columnas escalonadas en escritorio (vertical + horizontal en cada una);
+// en móvil, una sola columna en el orden de la visita.
+function galeria(ctx) {
+  const lista = C.instalaciones || [];
+  if (!lista.length) return "";
+  const ratio = { vertical: [4, 5], horizontal: [3, 2] };
+  const figura = (i, n) => {
+    const { titulo, alt } = ctx.L.clinica.instalacion(i);
+    const [a, b] = ratio[i.formato] || ratio.horizontal;
+    const src = (w, ext) => ctx.ruta(`assets/img/instalaciones/${i.archivo}-${w}.${ext}`);
+    return `<figure class="galeria-foto galeria-${i.formato}" style="--orden:${n}"><picture>
+      <source type="image/webp" srcset="${[480, 800, 1200].map((w) => `${src(w, "webp")} ${w}w`).join(", ")}" sizes="(min-width: 820px) 540px, 100vw">
+      <img src="${src(800, "jpg")}" alt="${esc(alt)}" width="800" height="${Math.round((800 * b) / a)}" loading="lazy" decoding="async">
+    </picture><figcaption>${esc(titulo)}</figcaption></figure>`;
+  };
+  // Columna 1: posiciones 0 y 2; columna 2: posiciones 1 y 3
+  const col = (r) => lista.map((i, n) => [i, n]).filter(([, n]) => n % 2 === r).map(([i, n]) => figura(i, n)).join("");
+  return `<section class="bloque galeria-bloque" aria-labelledby="galeria-t">
+  <div class="envoltura">
+    <h2 id="galeria-t">${ctx.T.instalaciones_t}</h2>
+    <p class="bloque-intro">${ctx.T.instalaciones_intro} ${pendiente("Confirmar con Carmen los nombres de cada sala")}</p>
+    <div class="galeria"><div class="galeria-col">${col(0)}</div><div class="galeria-col">${col(1)}</div></div>
+  </div>
+</section>`;
 }
 
 // ---------- datos estructurados -----------------------------------------
@@ -377,6 +406,8 @@ function inicio(ctx) {
   </div>
 </section>
 
+${galeria(ctx)}
+
 <section class="bloque visita-bloque" aria-labelledby="visita-t">
   <div class="envoltura visita-rejilla">
     <div>
@@ -421,7 +452,7 @@ function paginaServicio(ctx, s) {
       <h2>${T.que_hacemos}</h2>
       ${lista(s.que_hacemos)}
       ${s.id === "podologia-deportiva" ? `<p class="nota-formacion">${esc(T.cursando_dep(C.profesional.nombre_corto))}</p>` : ""}
-      ${s.id === "estudio-biomecanico" ? pendiente("Confirmar equipamiento del estudio (plataforma de presiones, vídeo, cinta) para describirlo") : ""}
+      ${s.id === "estudio-biomecanico" ? pendiente("En las fotos se ven cinta de andar y plataforma: confirmar si la plataforma es de presiones y si se graba vídeo, para describirlo") : ""}
       <h2>${T.faq}</h2>
       <div class="faq">${s.faq.map((f) => `<details><summary>${esc(f.p)}</summary><p>${esc(f.r)}</p></details>`).join("")}</div>
     </article>

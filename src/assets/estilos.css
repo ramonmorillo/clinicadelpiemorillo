@@ -271,6 +271,21 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 .formacion li { padding-left: 1.6rem; position: relative; }
 .formacion li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--atlantico); }
 
+/* La consulta: galería de instalaciones */
+.galeria { display: flex; flex-direction: column; gap: 1.5rem; }
+.galeria-col { display: contents; }
+.galeria-foto { margin: 0; order: var(--orden, 0); }
+.galeria-foto picture { display: block; border-radius: var(--radio); overflow: hidden; background: var(--bruma); }
+.galeria-vertical picture { aspect-ratio: 4 / 5; }
+.galeria-horizontal picture { aspect-ratio: 3 / 2; }
+.galeria-foto img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.galeria-foto figcaption { color: var(--gris); font-size: 0.95em; margin-top: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--atlantico); }
+@media (min-width: 820px) {
+  .galeria { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .galeria-col { display: grid; gap: 2rem; }
+  .galeria-col:last-child { margin-top: 4rem; }
+}
+
 /* Dónde estamos */
 .visita-rejilla { display: grid; gap: 2.5rem; }
 @media (min-width: 820px) { .visita-rejilla { grid-template-columns: 1fr 1fr; gap: 4rem; } }
