@@ -65,6 +65,25 @@
     "instagram": ""
   },
 
+  "en": {
+    "_nota": "Textos de la clínica en inglés. El resto de datos (teléfono, dirección, horario) se toma de arriba.",
+    "titulo": "Podiatrist",
+    "colegio": "Colegio Profesional de Podólogos de Andalucía (Andalusian Professional Association of Podiatrists)",
+    "formacion": [
+      "Master's degree in Biomechanics and Orthopodology",
+      "University Expert qualification in Diabetic Foot and Children's Podiatry",
+      "Currently studying for a Master's degree in Sports Podiatry"
+    ],
+    "lema": "When the heart speaks through our feet",
+    "horario_nota": "By appointment only.",
+    "whatsapp_mensaje": "Hello, I would like to book an appointment at the clinic.",
+    "fotos_alt": {
+      "inicio": "Carmen Morillo, podiatrist, in a white coat at her practice in Barbate",
+      "sobre_mi": "Carmen Morillo, podiatrist, smiling at her practice",
+      "consulta": "Carmen Morillo sitting at the desk of her practice in Barbate"
+    }
+  },
+
   "_pendientes": {
     "nombre_comercial": "Confirmar nombre comercial definitivo (tarjeta: «Clínica del Pie Podóloga Morillo»; Google: «Clínica del Pie Morillo»).",
     "horario": "Horario tomado de Facebook vía Google. Confirmar con la clínica.",
@@ -75,6 +94,7 @@
     "domicilio": "¿Atiende a domicilio? Aparece en directorios antiguos.",
     "formacion": "Añadir titulación de base (Grado o Diplomatura en Podología) y universidad, si se quiere mostrar.",
     "redes": "URL de la página de Facebook.",
+    "traduccion_en": "La versión en inglés es una traducción propuesta: revisar con Carmen (sobre todo los textos clínicos y la denominación de su formación).",
     "estudio_biomecanico": "Confirmar equipamiento (plataforma de presiones, cinta, vídeo) para describirlo con exactitud."
   }
 }

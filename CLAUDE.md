@@ -28,6 +28,12 @@ Web estática de una consulta de podología (Barbate, Andalucía).
    - Público mayor y con baja visión.
 6. **Un único movimiento automático:** la huella de la portada. No añadir animaciones de entrada en secciones.
 
+7. **Dos idiomas.**
+   - Todo cambio de contenido se hace en español y en inglés.
+   - `data/servicios.json` ↔ `data/servicios.en.json`: el campo `id` del inglés coincide con el `slug` del español.
+   - Los textos fijos de la interfaz van en `scripts/textos.mjs`, nunca escritos en las plantillas.
+   - Inglés británico, mismo tono prudente y mismas prohibiciones de publicidad sanitaria.
+
 ## Flujo de trabajo
 
 - `npm run build:preview` y revisar en el navegador (escritorio y móvil, 390px).

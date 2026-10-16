@@ -279,7 +279,7 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 .horario th { font-weight: 650; width: 42%; }
 .horario tr.cerrado td { color: var(--gris); }
 .horario tr.hoy th, .horario tr.hoy td { color: var(--atlantico); font-weight: 750; }
-.horario tr.hoy th::after { content: " (hoy)"; font-weight: 500; }
+.horario tr.hoy th::after { content: " (" attr(data-hoy) ")"; font-weight: 500; }
 .nota { color: var(--gris); font-size: 0.95em; margin-top: 0.75rem; }
 
 /* ---------- páginas interiores ---------- */
@@ -369,3 +369,18 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 @media (min-width: 900px) { .contacto-cabecera { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3.5rem; } }
 .foto-ancha { margin: 0; border-radius: var(--radio); overflow: hidden; aspect-ratio: 3 / 2; max-width: 100%; background: var(--bruma); }
 .foto-ancha img { object-position: 60% 50%; }
+
+/* Cambio de idioma: siempre visible, también en móvil */
+.cabecera-acciones { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; }
+.idioma { display: inline-flex; align-items: center; gap: 0.4rem; min-height: 48px; padding: 0.4rem 0.75rem; border-radius: var(--radio-boton); color: var(--tinta); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+.idioma:hover { background: var(--bruma); color: var(--atlantico); }
+.idioma svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+@media (min-width: 860px) { .cabecera-acciones { order: 3; margin-left: 0; } .menu { margin-left: auto; } }
+.marca-texto small, .marca-texto strong { white-space: nowrap; }
+.idioma-corto { display: none; }
+@media (max-width: 440px) {
+  .idioma { padding-inline: 0.55rem; }
+  .idioma-largo { display: none; }
+  .idioma-corto { display: inline; }
+  .menu-boton { padding-inline: 0.75rem; }
+}

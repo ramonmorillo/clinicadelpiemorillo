@@ -23,7 +23,9 @@
   var horario = window.HORARIO;
   if (!horario) return;
 
-  var DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  var TX = window.TEXTOS || {};
+  var DIAS = TX.dias || ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
+  function plantilla(clave, h, d) { return (TX[clave] || "").replace("{h}", h).replace("{d}", d || ""); }
   var ahora;
   try {
     var partes = new Intl.DateTimeFormat("es-ES", {
@@ -52,15 +54,15 @@
   var hoy = tramosDe(ahora.dia);
   for (var i = 0; i < hoy.length; i++) {
     var a = minutos(hoy[i][0]), b = minutos(hoy[i][1]);
-    if (ahora.min >= a && ahora.min < b) { abierto = true; texto = "Abierto ahora, hasta las " + legible(hoy[i][1]); break; }
-    if (ahora.min < a) { texto = "Cerrado ahora. Abre hoy a las " + legible(hoy[i][0]); break; }
+    if (ahora.min >= a && ahora.min < b) { abierto = true; texto = plantilla("abierto", legible(hoy[i][1])); break; }
+    if (ahora.min < a) { texto = plantilla("abre_hoy", legible(hoy[i][0])); break; }
   }
   if (!abierto && !texto) {
     for (var k = 1; k <= 7; k++) {
       var dd = (ahora.dia + k) % 7;
       var t = tramosDe(dd);
       if (t.length) {
-        texto = "Cerrado ahora. Abre " + (k === 1 ? "mañana" : "el " + DIAS[dd]) + " a las " + legible(t[0][0]);
+        texto = k === 1 ? plantilla("abre_manana", legible(t[0][0])) : plantilla("abre_dia", legible(t[0][0]), DIAS[dd]);
         break;
       }
     }
@@ -74,5 +76,7 @@
   });
   document.querySelectorAll('.horario tr[data-dia="' + ahora.dia + '"]').forEach(function (tr) {
     tr.classList.add("hoy");
+    var th = tr.querySelector("th"), tabla = tr.closest("table");
+    if (th && tabla) th.setAttribute("data-hoy", tabla.getAttribute("data-hoy") || "");
   });
 })();

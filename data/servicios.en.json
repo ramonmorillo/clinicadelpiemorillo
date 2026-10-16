@@ -1,0 +1,234 @@
+{
+  "_instrucciones": "English version of data/servicios.json. 'id' must match the Spanish 'slug' so both versions link to each other. 'slug' is the English URL. 'revisado' becomes true only once the podiatrist has approved this translation.",
+
+  "servicios": [
+    {
+      "id": "pie-infantil",
+      "slug": "childrens-feet",
+      "nombre": "Children's feet",
+      "titulo_seo": "Children's podiatry in Barbate",
+      "revisado": false,
+      "resumen": "Foot and walking check-ups as children grow, from their first steps to their teenage years.",
+      "que_es": [
+        "A child's foot changes a great deal while it grows. Many things that worry parents, such as flexible flat feet in the early years, are a normal part of development and correct themselves.",
+        "A podiatry check-up helps to tell what is normal for the child's age from what should be monitored or treated, and gives advice on suitable footwear at each stage."
+      ],
+      "cuando_consultar": [
+        "Your child complains of pain in the feet, ankles or legs, or tires more quickly than other children.",
+        "They trip or fall often.",
+        "They usually walk on tiptoe after the first few years.",
+        "Their feet point noticeably inwards or outwards.",
+        "Their shoes wear down very unevenly.",
+        "They have an ingrowing toenail or a verruca on the sole of the foot."
+      ],
+      "que_hacemos": [
+        "Examination of the foot and leg, with the child lying down and standing.",
+        "Observation of how they walk.",
+        "An explanation for the family of what is normal for their age.",
+        "If needed: follow-up, exercises, footwear advice or custom insoles."
+      ],
+      "faq": [
+        {
+          "p": "My child has flat feet. Do they need insoles?",
+          "r": "Not always. In the early years the arch of the foot is still developing, and a flexible flat foot that doesn't hurt is usually normal. After the examination we'll explain whether it should be treated or simply monitored."
+        },
+        {
+          "p": "At what age should the first check-up be?",
+          "r": "There is no set age. A good time is once your child walks confidently, or as soon as you notice something that worries you."
+        },
+        {
+          "p": "What footwear is best for a child?",
+          "r": "In general, shoes that are flexible, light, the right size and that hold the foot securely. At the appointment we'll advise you according to your child's age and activities."
+        }
+      ]
+    },
+    {
+      "id": "pie-diabetico",
+      "slug": "diabetic-foot",
+      "nombre": "Diabetic foot care",
+      "titulo_seo": "Diabetic foot care in Barbate",
+      "revisado": false,
+      "resumen": "Regular check-ups and safe foot care for people with diabetes, to prevent wounds and spot problems early.",
+      "que_es": [
+        "Over time, diabetes can reduce feeling and circulation in the feet. A small blister or a cut while trimming your nails can go unnoticed and become complicated.",
+        "A podiatry check-up shows the level of risk for each foot and allows it to be cared for safely. It complements the follow-up by your doctor and your health centre's nursing team; it does not replace it."
+      ],
+      "cuando_consultar": [
+        "You have diabetes and have never had your feet checked.",
+        "You notice tingling, numbness or less feeling in your feet.",
+        "You have hard skin, corns or thickened nails that you can't safely look after yourself.",
+        "You have had a wound on your foot that was slow to heal."
+      ],
+      "aviso_urgente": {
+        "titulo": "When not to wait for your appointment",
+        "texto": "See your doctor or go to A&E the same day if you have a wound that isn't getting better, an area that is red, hot or swollen, a change of colour in a toe (dark or bluish), a bad smell or a fever."
+      },
+      "que_hacemos": [
+        "Examination of sensation, pulses, skin, nails and the shape of the foot.",
+        "Assessment of your risk level and how often you should be checked.",
+        "Safe treatment of hard skin, corns and nails.",
+        "Advice on daily care and footwear.",
+        "If needed: insoles that spread the pressure under your foot."
+      ],
+      "faq": [
+        {
+          "p": "How often should I have my feet checked?",
+          "r": "It depends on your risk. It can range from once a year if your risk is low to every few months if it is high. We'll tell you after the first examination."
+        },
+        {
+          "p": "Can I cut my nails and remove hard skin at home?",
+          "r": "Nails, yes, carefully and straight across, if you can see and reach them well. For hard skin, it's best not to use blades or corn plasters: with diabetes it's easy to injure yourself without noticing."
+        },
+        {
+          "p": "What should I look for every day?",
+          "r": "Check your feet in good light (with a mirror if you can't reach): wounds, blisters, redness or changes in colour. Also check inside your shoes before putting them on."
+        }
+      ]
+    },
+    {
+      "id": "estudio-biomecanico",
+      "slug": "gait-analysis",
+      "nombre": "Biomechanical gait analysis",
+      "titulo_seo": "Gait analysis in Barbate",
+      "revisado": false,
+      "resumen": "An analysis of how you stand and walk, to understand what is causing discomfort in your feet, ankles or legs.",
+      "que_es": [
+        "Many foot problems, and some ankle, knee or hip problems, are related to the way you stand or walk.",
+        "A biomechanical analysis looks at the structure of the foot and how it moves, to find the cause and decide on treatment. Not every case needs insoles."
+      ],
+      "cuando_consultar": [
+        "Your heel hurts, especially in the first steps of the morning.",
+        "You have pain in the ball of the foot.",
+        "Your feet or legs get very tired when walking or standing.",
+        "You have ankle or knee discomfort that gets worse when walking or running.",
+        "You are about to start running or playing sport regularly."
+      ],
+      "que_hacemos": [
+        "A conversation about your symptoms, your activity and your footwear.",
+        "Examination of the foot and leg on the couch.",
+        "Assessment of how you stand, at rest.",
+        "Analysis of how you walk and, if you play sport, how you run.",
+        "A clear explanation of the results and a treatment proposal."
+      ],
+      "faq": [
+        {
+          "p": "How long does the analysis take?",
+          "r": "Usually between 45 and 60 minutes, depending on the case. Bring the shoes you wear most and comfortable clothes."
+        },
+        {
+          "p": "Does it always end with insoles?",
+          "r": "No. Depending on the results, treatment may be a change of footwear, exercises, insoles or a combination."
+        }
+      ]
+    },
+    {
+      "id": "plantillas-a-medida",
+      "slug": "custom-insoles",
+      "nombre": "Custom insoles",
+      "titulo_seo": "Custom insoles in Barbate",
+      "revisado": false,
+      "resumen": "Insoles made for your feet based on a biomechanical analysis, for everyday use or for sport.",
+      "que_es": [
+        "A custom insole (foot orthosis) is designed for your foot and for what you need: to spread pressure, improve how you stand or take the load off a painful area.",
+        "Unlike an off-the-shelf insole, it is made from a mould of your foot and the examination carried out beforehand."
+      ],
+      "cuando_consultar": [
+        "After a biomechanical analysis shows that they may help you.",
+        "If you already wear insoles and they are worn out or no longer help."
+      ],
+      "que_hacemos": [
+        "A biomechanical analysis first.",
+        "A mould of your foot.",
+        "Design and manufacture of the insole.",
+        "Fitting in your shoes.",
+        "A follow-up to check that they fit well."
+      ],
+      "faq": [
+        {
+          "p": "How long do insoles last?",
+          "r": "It depends on the material, how much you use them and your activity. At follow-ups we check their condition and let you know when they should be replaced."
+        },
+        {
+          "p": "Can I use them in any shoe?",
+          "r": "They are designed for a specific type of footwear (everyday, sports or dress shoes). If you wear several types, we'll discuss it when making them."
+        }
+      ]
+    },
+    {
+      "id": "quiropodologia",
+      "slug": "chiropody",
+      "nombre": "Chiropody",
+      "titulo_seo": "Chiropody in Barbate: corns, hard skin and nails",
+      "revisado": false,
+      "resumen": "Treatment of hard skin, corns and nail problems, such as ingrowing or thickened toenails.",
+      "que_es": [
+        "Chiropody treats the most common skin and nail problems of the foot: hard skin, corns, ingrowing toenails and thickened nails.",
+        "It is carried out with sterile instruments and adapted to each person, with particular care for older people and those with diabetes or circulation problems."
+      ],
+      "cuando_consultar": [
+        "A corn or hard skin hurts when you walk.",
+        "You have an ingrowing toenail that is red or inflamed.",
+        "Your nails are thickened or misshapen and you can't cut them yourself.",
+        "You prefer your feet to be cared for by a healthcare professional."
+      ],
+      "que_hacemos": [
+        "Examination and assessment of the cause (footwear, foot shape, the way you stand).",
+        "Removal of hard skin and corns.",
+        "Nail cutting and filing.",
+        "Treatment of ingrowing toenails.",
+        "Advice to stop them coming back."
+      ],
+      "faq": [
+        {
+          "p": "Does it hurt?",
+          "r": "It is usually well tolerated. If an area is very sensitive or inflamed, we assess it and adapt the treatment."
+        },
+        {
+          "p": "Why do corns keep coming back?",
+          "r": "Because they are usually caused by repeated rubbing or pressure. So as well as treating them, we look for the cause: footwear, foot shape or the way you stand."
+        }
+      ]
+    },
+    {
+      "id": "podologia-deportiva",
+      "slug": "sports-podiatry",
+      "nombre": "Feet and sport",
+      "titulo_seo": "Sports podiatry in Barbate",
+      "revisado": false,
+      "resumen": "Prevention and assessment of foot problems in people who run, walk or play sport regularly.",
+      "que_es": [
+        "Sport greatly increases the loads the foot has to bear. Blisters, damaged nails, heel pain or discomfort that appears when training increases are common reasons to see a podiatrist.",
+        "A podiatry assessment aims to help you keep up your activity with less discomfort and a lower risk of injury."
+      ],
+      "cuando_consultar": [
+        "You have foot or ankle pain that appears when you exercise.",
+        "You often get blisters, hard skin or black toenails.",
+        "You'd like advice on choosing sports shoes.",
+        "You are preparing for a race or increasing your training."
+      ],
+      "que_hacemos": [
+        "Examination of the foot and of how you run or move in your sport.",
+        "Advice on sports footwear.",
+        "Sports insoles, if needed.",
+        "Treatment of hard skin, blisters and damaged nails."
+      ],
+      "faq": [
+        {
+          "p": "Do I need insoles to run?",
+          "r": "Not necessarily. Many people run without them. They are considered when there is discomfort or a change in how you stand that justifies them."
+        }
+      ]
+    }
+  ],
+
+  "motivos": [
+    { "texto": "My heel hurts when I get up", "servicio": "estudio-biomecanico" },
+    { "texto": "I have an ingrowing toenail", "servicio": "quiropodologia" },
+    { "texto": "My child walks on tiptoe or trips a lot", "servicio": "pie-infantil" },
+    { "texto": "I have diabetes and have never had my feet checked", "servicio": "pie-diabetico" },
+    { "texto": "I have corns or hard skin that bother me", "servicio": "quiropodologia" },
+    { "texto": "I run and my feet hurt", "servicio": "podologia-deportiva" },
+    { "texto": "My insoles don't help any more", "servicio": "plantillas-a-medida" },
+    { "texto": "My feet get very tired when I walk", "servicio": "estudio-biomecanico" }
+  ]
+}

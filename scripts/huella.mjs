@@ -48,7 +48,7 @@ function presion(x, y) {
 }
 
 // --- Generación ---------------------------------------------------------
-export function huellaSVG() {
+export function huellaSVG(titulo) {
   const puntos = [];
 
   for (let y = PASO / 2; y < H; y += PASO) {
@@ -84,5 +84,5 @@ export function huellaSVG() {
     })
     .join("");
 
-  return `<svg class="huella" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="huella-t"><title id="huella-t">Huella plantar representada como un mapa de presiones: los puntos más grandes y oscuros indican las zonas donde el pie apoya con más fuerza.</title>${circulos}</svg>`;
+  return `<svg class="huella" viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="huella-t"><title id="huella-t">${titulo}</title>${circulos}</svg>`;
 }

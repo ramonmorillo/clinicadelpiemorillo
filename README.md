@@ -2,14 +2,18 @@
 
 Web de la consulta de podología de Carmen Morillo en Barbate (Cádiz).
 
-Sitio estático, sin frameworks, sin cookies y sin formularios. Todo el contenido sale de dos archivos de datos.
+Sitio estático, sin frameworks, sin cookies y sin formularios. Todo el contenido sale de los archivos de `data/`.
+
+La web está en español (raíz) y en inglés (`/en/`). Cada página enlaza con su versión en el otro idioma.
 
 ## Dónde se cambia cada cosa
 
 | Quiero cambiar… | Archivo |
 |---|---|
 | Teléfono, dirección, horario, nº de registro, NIF, foto, formación | `data/clinica.json` |
-| Textos de los servicios y los motivos de consulta de la portada | `data/servicios.json` |
+| Textos de los servicios y los motivos de consulta de la portada | `data/servicios.json` (español) y `data/servicios.en.json` (inglés) |
+| Textos de la clínica en inglés (lema, formación, nota del horario) | `data/clinica.json`, apartado `"en"` |
+| Textos fijos de la web (menús, botones, títulos de sección) en ambos idiomas | `scripts/textos.mjs` |
 | Colores, tipografía, espaciados | `src/assets/estilos.css` (decisiones en `docs/DISENO.md`) |
 | Estructura de las páginas | `scripts/build.mjs` |
 | Dibujo de la huella de la portada | `scripts/huella.mjs` |
