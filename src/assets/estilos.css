@@ -52,7 +52,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --sal: #121a1f;
     --bruma: #1a242a;
     --piel: #2a2420;
@@ -70,6 +70,24 @@
     --h4: #a9d2df;
     color-scheme: dark;
   }
+}
+:root[data-theme="dark"] {
+  --sal: #121a1f;
+  --bruma: #1a242a;
+  --piel: #2a2420;
+  --tinta: #e6eef0;
+  --gris: #a7b3b8;
+  --atlantico: #9fc6d4;
+  --atlantico-hover: #c4dde6;
+  --linea: #2c3a41;
+  --aviso: #2d2615;
+  --marca-pend: #4a3f12;
+  --h0: #213641;
+  --h1: #2c5363;
+  --h2: #3f7a90;
+  --h3: #6aa6bb;
+  --h4: #a9d2df;
+  color-scheme: dark;
 }
 
 /* ---------- base ---------- */
@@ -136,7 +154,7 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 .enlace { font-weight: 700; }
 
 /* ---------- cabecera ---------- */
-.cabecera { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--sal) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linea); }
+.cabecera { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--sal) 92%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--linea); }
 .cabecera-fila { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 72px; }
 
 .marca { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--tinta); text-decoration: none; }
@@ -328,7 +346,8 @@ mark.pendiente { background: var(--marca-pend); color: var(--tinta); font-size: 
 .pie ul { list-style: none; display: grid; gap: 0.35rem; }
 .pie-lema { font-family: var(--lema); font-size: 1.35rem; color: #c9dfe6; margin-top: 1rem; }
 .pie-legal { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; border-top: 1px solid #3a4a52; margin-top: 2.5rem; padding-top: 1.25rem; font-size: 0.9rem; color: #b9c6cb; }
-@media (prefers-color-scheme: dark) { .pie { background: #0b1114; } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pie { background: #0b1114; } }
+:root[data-theme="dark"] .pie { background: #0b1114; }
 
 /* ---------- barra fija en móvil ---------- */
 .barra-movil { position: fixed; inset: auto 0 0; z-index: 30; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 0.6rem; padding: 0.7rem 0.8rem calc(0.7rem + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--sal) 95%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--linea); }
